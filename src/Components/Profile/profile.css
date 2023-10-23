@@ -1,0 +1,64 @@
+.user {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+  padding: 25px 15px;
+  border-radius: 20px;
+}
+.user-img {
+  height: 165px;
+  color: transparent;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.user-img input {
+  display: none;
+}
+.user-img .labelLine {
+  display: none;
+  cursor: pointer;
+  height: 165px;
+  width: 165px;
+}
+.user-img:hover .labelLine {
+  margin-bottom: 0;
+  color: rgb(250, 250, 250);
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  z-index: 10000;
+}
+.user-img span {
+  display: inline-flex;
+  padding: 0.2em;
+  height: 2em;
+}
+.user-img img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 165px;
+  height: 165px;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+  border-radius: 100px;
+  z-index: 0;
+}
+.user .logOutButton {
+  margin-top: 15px;
+}
+.user .logOutButton:hover {
+  border-color: #e02e22;
+  color: #e02e22;
+}/*# sourceMappingURL=profile.css.map */

@@ -1,0 +1,68 @@
+.addInfoButton {
+  padding: 1px 5px;
+  border-radius: 25px;
+  font-size: 15px;
+}
+
+
+.profileForm {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: opacity ease-in-out .5s;
+
+  .ageInputDiv {
+
+    input {
+      width: 200px;
+      border: 0;
+      border-color: #2d2f68;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: rgb(49, 49, 49);
+      transition: border ease-in-out 0.3s;
+      
+      &:focus {
+        outline: none;
+        border: 1px solid #747bff;
+      }
+    }
+
+    .errorDiv {
+      color: red;
+      height: 20px;
+      max-height: 100%;
+    }
+  }
+
+  .genderInputDiv {
+    input {
+      &:hover {
+        color: red;
+        border-color:#747bff;
+      }
+    }
+  }
+
+  .formButtonBox {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px;
+    gap: 10px;
+
+    .submitButton {
+      &:hover {
+        border-color: #22e077;
+      }
+    }
+
+    .cancelButton {
+      &:hover {
+        border-color: #e02e22;
+      }
+    }
+  }
+}

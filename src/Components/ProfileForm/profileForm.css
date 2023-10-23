@@ -1,0 +1,49 @@
+.addInfoButton {
+  padding: 1px 5px;
+  border-radius: 25px;
+  font-size: 15px;
+}
+
+.profileForm {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: opacity ease-in-out 0.5s;
+}
+.profileForm .ageInputDiv input {
+  width: 200px;
+  border: 0;
+  border-color: #2d2f68;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(49, 49, 49);
+  transition: border ease-in-out 0.3s;
+}
+.profileForm .ageInputDiv input:focus {
+  outline: none;
+  border: 1px solid #747bff;
+}
+.profileForm .ageInputDiv .errorDiv {
+  color: red;
+  height: 20px;
+  max-height: 100%;
+}
+.profileForm .genderInputDiv input:hover {
+  color: red;
+  border-color: #747bff;
+}
+.profileForm .formButtonBox {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px;
+  gap: 10px;
+}
+.profileForm .formButtonBox .submitButton:hover {
+  border-color: #22e077;
+}
+.profileForm .formButtonBox .cancelButton:hover {
+  border-color: #e02e22;
+}/*# sourceMappingURL=profileForm.css.map */

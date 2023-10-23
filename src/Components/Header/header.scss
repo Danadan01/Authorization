@@ -1,0 +1,30 @@
+$imgsize: 55px;
+$radius: 100px;
+$shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  border: 1px solid black;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: $shadow;
+  padding: 0px 30px;
+  position: relative;
+
+  &-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &-img {
+    cursor: pointer;
+    height: $imgsize;
+    width: $imgsize;
+    border-radius: $radius;
+    object-fit: cover;
+  }
+}

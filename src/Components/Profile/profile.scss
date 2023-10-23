@@ -1,0 +1,82 @@
+@mixin object-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$circleSize: 165px;
+$radius: 100px;
+$shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+$fontColor: rgb(250, 250, 250);
+
+.user {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid black;
+  box-shadow: $shadow;
+  padding: 25px 15px;
+  border-radius: 20px;
+
+
+  &-img {
+    height: 165px;
+    color: transparent;
+    transition: all 0.3s ease;
+    @include object-center;
+    position: relative;
+
+    input {
+      display: none;
+    }
+
+    .labelLine {
+      display: none;
+      cursor: pointer;
+      height: $circleSize;
+      width: $circleSize;
+
+    }
+    
+    &:hover {
+      .labelLine{
+        margin-bottom: 0;
+        color: $fontColor;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: background-color 0.2s ease-in-out;
+        @include object-center;
+        border-radius: $radius;
+        z-index: 10000;
+      }
+    }
+
+    span {
+      display: inline-flex;
+      padding: 0.2em;
+      height: 2em;
+    }
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      width: $circleSize;
+      height: $circleSize;
+      box-shadow: $shadow;
+      border-radius: $radius;
+      z-index: 0;
+    }
+  }
+
+  .logOutButton {
+    margin-top: 15px;
+
+    &:hover {
+      border-color: #e02e22;
+      color: #e02e22;
+    }
+  }
+}
