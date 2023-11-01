@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useFormik } from "formik";
 import { profileInputsSchema } from "../ValidationSchemas/profileInputsSchema";
-import { getUserEmptyDataArr } from "../helpers/getUserEmptyDataArr";
-import { setValuesToStorages } from "../helpers/setValuesToStorages";
+import { getUserEmptyDataArr } from "../helpers/getters";
+import { setCompletedUser } from "../helpers/storageSetters";
 
 
 const useProfileForm = () => {
@@ -17,10 +17,9 @@ const useProfileForm = () => {
     validationSchema: profileInputsSchema,
     onSubmit: (values) => {
       setIsActive(false);
-      setValuesToStorages(values);
+      setCompletedUser(values);
       setEmptyValuesArr(getUserEmptyDataArr);
-      
-    },
+    }
   });
 
   return {profileForm, isActive, setIsActive, emptyValuesArr}

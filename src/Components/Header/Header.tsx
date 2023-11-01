@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import { headerProps } from "../../Interfaces/headerProps";
 import SubMenu from "../Sub-menu/SubMenu";
 import useIsOutsideClick from "../../hooks/useIsOutsideClick";
-import "./header.css";
+import "./header.scss";
 
 const Header = ({ isLoggedIn, imgSrc }: headerProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -18,7 +18,7 @@ const Header = ({ isLoggedIn, imgSrc }: headerProps) => {
     <div className="header">
       <div className="header-left">
         <Link to="/">
-          <img src="#" alt="Site_logo" />
+          <img src="../logo.png" alt="Site_logo" className="header-logo"/>
         </Link>
       </div>
 

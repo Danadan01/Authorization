@@ -1,15 +1,14 @@
 import { useEffect } from "react";
-import "./profileForm.css";
-import { isElementInArr } from "../../helpers/isElementInArr";
+import "./profileForm.scss";
 import useProfileForm from "../../hooks/useProfileForm";
 
 interface ProfileFormProps {
-  setState: (arg: boolean) => void; // do I have to pass it at all?
+  setState: (arg: boolean) => void;
 }
 
 const ProfileForm = ({ setState }: ProfileFormProps) => {
-  const { profileForm, isActive, setIsActive, emptyValuesArr } = useProfileForm();
-
+  const { profileForm, isActive, setIsActive, emptyValuesArr } =
+    useProfileForm();
 
   useEffect(() => {
     setState(isActive);
@@ -27,7 +26,7 @@ const ProfileForm = ({ setState }: ProfileFormProps) => {
       {isActive && (
         <form onSubmit={profileForm.handleSubmit} className="profileForm">
           <div>Add more information about yourself</div>
-          {isElementInArr("age", emptyValuesArr) && (
+          {emptyValuesArr.includes("age") && (
             <div className="ageInputDiv">
               <input
                 id="age"
@@ -39,14 +38,12 @@ const ProfileForm = ({ setState }: ProfileFormProps) => {
               />
 
               <div className="errorDiv">
-                {profileForm.errors.age &&
-                  profileForm.touched.age &&
-                  profileForm.errors.age}
+                {profileForm.touched.age && profileForm.errors.age}
               </div>
             </div>
           )}
 
-          {isElementInArr("gender", emptyValuesArr) && (
+          {emptyValuesArr.includes("gender") && (
             <div className="genderInputDiv">
               <label>Choose your gender:</label>
               <div>

@@ -1,7 +1,7 @@
-import "./profile.css";
+import "./profile.scss";
 import { useEffect, useState} from "react";
 import { User } from "../../Interfaces/User";
-import { setToStorages } from "../../helpers/setToStorages";
+import { setToStorages } from "../../helpers/storageSetters";
 import { logOut } from "../../helpers/logOut";
 import { useNavigate } from "react-router-dom";
 import { ProfileProps } from "../../Interfaces/ProfileProps";
@@ -12,7 +12,7 @@ import ProfileForm from "../ProfileForm/ProfileForm";
 const Profile = ({ setIsLoggedIn, imgSrc, setImgSrc }: ProfileProps) => {
   const { logOutGoogle, isGoogleUser } = useGoogleAuthorization();
 
-  const [, setState] = useState<boolean>(false) //how to make it clever
+  const [, setState] = useState<boolean>(false);
 
   const currentUser: User = JSON.parse(
     sessionStorage.getItem(StorageTypes.currentUser) as string
@@ -24,7 +24,7 @@ const Profile = ({ setIsLoggedIn, imgSrc, setImgSrc }: ProfileProps) => {
   useEffect(() => {
     setImgSrc(userImg);
     setIsLoggedIn(true);
-  }, []);
+  }, []); 
 
   const loadFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {

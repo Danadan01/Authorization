@@ -1,10 +1,10 @@
 import { useFormik } from "formik";
 import { setCookie } from "../helpers/cookies";
-import { isStoredEmail } from "../helpers/isStoredEmail";
+import { isStoredEmail } from "../helpers/checkers";
 import { registrationSchema } from "../ValidationSchemas/registrationSchema";
 import { StorageTypes } from "../Constants/storage.constants";
 import { User } from "../Interfaces/User";
-import { getAge } from "../helpers/getAge";
+import { getAge } from "../helpers/getters";
 import { useNavigate } from "react-router-dom";
 
 

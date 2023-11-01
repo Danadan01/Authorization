@@ -1,4 +1,4 @@
-import "./logIn.css";
+import "./logIn.scss";
 import { Link } from "react-router-dom";
 import useLoginForm from "../../hooks/useLoginForm";
 import useGoogleAuthorization from "../../hooks/useGoogleAuthorization";
@@ -18,9 +18,7 @@ const LogIn = () => {
           value={loginForm.values.email}
         />
         <div className="errorDiv">
-          {loginForm.errors.email &&
-            loginForm.touched.email &&
-            loginForm.errors.email}
+          {loginForm.touched.email && loginForm.errors.email}
         </div>
         <label>Enter your password:</label>
         <input
@@ -30,9 +28,7 @@ const LogIn = () => {
           value={loginForm.values.password}
         />
         <div className="errorDiv">
-          {loginForm.errors.password &&
-            loginForm.touched.password &&
-            loginForm.errors.password}
+          {loginForm.touched.password && loginForm.errors.password}
         </div>
         <button type="submit">Sign in with E-mail</button>
       </form>
